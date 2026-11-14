@@ -1,4 +1,4 @@
-package com.rafael.firstapplication
+package com.rafael.proffy
 
 import org.junit.Test
 

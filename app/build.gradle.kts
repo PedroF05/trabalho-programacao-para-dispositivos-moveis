@@ -1,15 +1,14 @@
-import com.google.wireless.android.sdk.stats.GradleBuildVariant
-
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.rafael.firstapplication"
+    namespace = "com.rafael.proffy"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.rafael.firstapplication"
+        applicationId = "com.rafael.proffy"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -32,9 +31,14 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
     buildFeatures {
         viewBinding = true
     }
+
 }
 
 dependencies {
@@ -46,4 +50,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    implementation("androidx.core:core-splashscreen:1.2.0")
 }

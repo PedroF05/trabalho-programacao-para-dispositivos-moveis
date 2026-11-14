@@ -22,5 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FIrstApplication"
+rootProject.name = "Proffy"
 include(":app")
+ 
